@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Scrollbar</title>
+  <style>
+    :root {
+      --scrollbar-primary-base: rgb(255, 255, 255, 0.5);
+      --scrollbar-secondary-base: rgb(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      overflow: overlay;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      display: block;
+    }
+
+    *::-webkit-scrollbar {
+      width: 72px;
+      height: 72px;
+    }
+
+    *::-webkit-scrollbar-track {
+      margin: 72px 72px;
+      border: 20px solid transparent;
+      background-clip: content-box;
+      border-radius: 64px;
+      background-color: var(--scrollbar-secondary-base);
+      box-shadow: inset 0px 0 0px 2px var(--scrollbar-primary-base);
+    }
+
+    *::-webkit-scrollbar-thumb {
+      border: 34px solid transparent;
+      background-clip: content-box;
+      border-radius: 64px;
+      background-color: var(--scrollbar-primary-base);
+    }
+
+    *::-webkit-scrollbar-track-piece {
+      margin: 4px;
+    }
+
+    *::-webkit-scrollbar-button,
+    *::-webkit-scrollbar-corner,
+    *::-webkit-resizer {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="assets/images/1.jpg" alt="..." />
+
+</body>
+
+</html>
